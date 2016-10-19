@@ -38,8 +38,8 @@ Remember, there is no right or wrong way to complete this test, so the above fea
 ## Things to Note
 
 The following are areas to consider when undertaking the assessment:
-* - Ensure you read the instructions thoroughly
-* - Comment your code so we understand your thought processes
-* - It doesn't have to be 100% operational providing you outline what does and what doesn't work
-* - If using a framework, make sure you demonstrate your coding ability and not your ability to simply use a framework
-* - Ensure the security and data integrity of your app is considered
+- Ensure you read the instructions thoroughly
+- Comment your code so we understand your thought processes
+- It doesn't have to be 100% operational providing you outline what does and what doesn't work
+- If using a framework, make sure you demonstrate your coding ability and not your ability to simply use a framework
+- Ensure the security and data integrity of your app is considered
