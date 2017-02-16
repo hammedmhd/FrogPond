@@ -1,15 +1,22 @@
-# FrogAsia Technical Test
+# Frog Education Sdn Bhd Technical Test
 
-**Thank you for applying to be a developer at FrogAsia.**
+**Thank you for applying to be a developer at Frog Education Sdn Bhd.**
 
 This tech test will help us evaluate your skills.
 
 There is no time limit attached to this test, so take your time and be thorough.
 
+The code provided by you wil be used **only** to judge your development abilities.
+
 ## Instructions
 
+There is no end to this test as it is open ended. You can do as much or as little as you like. The test is designed
+to allow you to make your own requirements, features, look and feel etc.
+
+It is used to see what type of developer you are and how you think about things.
+Showing your workings will help a lot (git history).
+
 - There is no right or wrong way of completing this test.
-- Your solution may be as simple or complex you like but please ensure you write enough code for us to judge your ability, not the ability of a framework.
 - You may use any technologies you need and/or require, but please justify your choices in your closing comments.
 - Please work out of the **`src`** directory as your root.
 - Once you have completed your tech test, please fill out the **`NOTES.md`** with any closing comments you would like to add.
@@ -34,6 +41,7 @@ Here are some feature ideas to get your creative juices flowing:
 - Birth / death
 
 Remember, there is no right or wrong way to complete this test, so the above features are not necessarily required.
+They could also be completely ignored and you can do something else entirely :)
 
 ## Things to Note
 
