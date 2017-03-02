@@ -126,7 +126,7 @@ if(isset($_SESSION['user'])){
 					<br><p class='caption caption3' style='color:black;'><b>Types of frogs</b></p>
 				</div>
 			</div>
-			<script src='js/script.js?2.3'></script>
+			<script src='js/script.js?2.4'></script>
 			</body>
 		</html>";
 }else{// LOGGED OUT VIEW

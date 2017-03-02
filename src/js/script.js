@@ -124,8 +124,8 @@ function loadList(){
 //updating edited table
 function updateList(){
 	$('#editlist').submit(function(e){
-	if(confirm('Updating your accounts login etails, are you sure?') == true){
-	$('#interact').html('Updating frogs list, please wait.');
+	if(confirm('Updating your frogs list, are you sure?') == true){
+	$('#interact').html('Updating frogs list, please wait..');
 	$('.note').fadeIn(500);
 		e.preventDefault();
 		$.post('froglistedit.php', $('#editlist').serialize(), function(response){
