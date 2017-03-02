@@ -7,7 +7,7 @@ if(isset($_POST['type'])){//adding new frong entry
 	$result = queryMysql("SELECT * FROM data");
 	$num = $result->num_rows;
 	$frogID = $num + 1;
-	$type = sanitizeString($_POST['type'];
+	$type = sanitizeString($_POST['type']);
 	$name = sanitizeString($_POST['name']);
 	$env = sanitizeString($_POST['environment']);
 	$birth = sanitizeString($_POST['birth']);
