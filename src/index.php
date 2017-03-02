@@ -57,7 +57,7 @@ if(isset($_SESSION['user'])){
 	$female = $num = $result->num_rows;
 	echo "<!DOCTYPE html>
 		<html>
-			<title>Frog Pond</title>
+			<title>Frog City</title>
 			<head>
 			<meta charset='utf-8'>
 			<meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -133,7 +133,7 @@ if(isset($_SESSION['user'])){
 	echo "<!DOCTYPE html>
 	<html>
 		<title>
-		Frog Pond
+		Frog City
 		</title>
 		<head>
 		<meta charset='utf-8'>
