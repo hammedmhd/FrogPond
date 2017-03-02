@@ -3,12 +3,12 @@ include 'functions.php';
 session_name('FROG');
 session_start();
 
-if(isset($_POST['typefrog'])){
-	$name = $_SESSION['name'] = isset($_POST['name']) ? $_POST['name'] : '';
-	$type = $_SESSION['type'] = isset($_POST['typefrog']) ? $_POST['typefrog'] : '';
-	$gender = $_SESSION['gender'] = isset($_POST['gender']) ? $_POST['gender'] : '';
-	$birth = $_SESSION['birth'] = isset($_POST['birth']) ? $_POST['birth'] : '';
-	$death = $_SESSION['death'] = isset($_POST['death']) ? $_POST['death'] : '';
+if(isset($_POST['typefrog'])){//search field submitted
+	$name = $_SESSION['name'] = isset($_POST['name']) ? sanitizeString($_POST['name']) : '';
+	$type = $_SESSION['type'] = isset($_POST['typefrog']) ? sanitizeString($_POST['typefrog']) : '';
+	$gender = $_SESSION['gender'] = isset($_POST['gender']) ? sanitizeString($_POST['gender']) : '';
+	$birth = $_SESSION['birth'] = isset($_POST['birth']) ? sanitizeString($_POST['birth']) : '';
+	$death = $_SESSION['death'] = isset($_POST['death']) ? sanitizeString($_POST['death']) : '';
 	echo "<div class='page-header'>
 				<i id='searchfrogs.php' style='transform:translate(0,40px); color:green;cursor:pointer' class='fa fa-arrow-circle-left fa-2x' onclick='loadPage(this.id)'></i>
 				<h4 class='text-center head'>Search My Frogs</h4>
@@ -77,9 +77,9 @@ if(isset($_POST['typefrog'])){
 				<td class='text-center'>".$row['birth']."</td>
 				<td class='text-center'>".$row['death']."</td></tr>";
 		}
-		echo "</tbody></table>";//search by field 
+		echo "</tbody></table>";
 }
-}else if(isset($_POST['asc'])){
+}else if(isset($_POST['asc'])){//search by field ascending
 	$asc = $_POST['asc'];
 	$name = $_SESSION['name'];
 	$type = $_SESSION['type']; 
@@ -119,7 +119,7 @@ if(isset($_POST['typefrog'])){
 			}
 		}
 	}
-	//$result = queryMysql("SELECT * FROM data ORDER BY frogID");
+	
 	$num = $result->num_rows;
 	if($result->num_rows !== 0){
 	echo "<div style='padding:0 0 15px 0; margin-bottom:10px; min-width:100%; overflow:auto; border-radius:10px' class='panel panel-success col-xs-12'>
@@ -154,9 +154,9 @@ if(isset($_POST['typefrog'])){
 				<td class='text-center'>".$row['birth']."</td>
 				<td class='text-center'>".$row['death']."</td></tr>";
 		}
-		echo "</tbody></table>";//view by field asc
+		echo "</tbody></table>";
 }
-}else if(isset($_POST['desc'])){
+}else if(isset($_POST['desc'])){//search by field descending
 	$desc = $_POST['desc'];
 	$name = $_SESSION['name'];
 	$type = $_SESSION['type']; 
@@ -231,9 +231,9 @@ if(isset($_POST['typefrog'])){
 				<td class='text-center'>".$row['birth']."</td>
 				<td class='text-center'>".$row['death']."</td></tr>";
 		}
-		echo "</tbody></table>";//view by field desc
+		echo "</tbody></table>";
 }
-}else{
+}else{//main view
 	echo "<div class='page-header'>
 				<a style='transform:translate(0,40px); color:green;cursor:pointer' class='fa fa-arrow-circle-left fa-2x' href='index.php'></a>
 				<h4 class='text-center head'>Search My Frogs</h4>
@@ -267,6 +267,6 @@ if(isset($_POST['typefrog'])){
 	<input type='text' style='width:50%' autofocus='on' class='fixInput text-center' name='death' placeholder='Death'><br><br>
 	<input type='submit' class='btn btn-success' value='Search' onclick='searchFrogs()'>
 	</form>
-	";//main view
+	";
 }
 ?>

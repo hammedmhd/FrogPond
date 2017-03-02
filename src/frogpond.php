@@ -2,7 +2,7 @@
 include 'functions.php';
 session_name('FROG');
 session_start();
-$switch;
+
 echo "<div class='page-header'>
 				<a style='transform:translate(0,40px); color:green;cursor:pointer' class='fa fa-arrow-circle-left fa-2x' href='index.php'></a>
 				<h4 class='text-center head'>Types of frogs</h4>

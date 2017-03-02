@@ -37,8 +37,8 @@ if(isset($_POST['usern'])){
 }
 
 if(isset($_POST['newuser'])){ // registering new account.
-	$user = $_POST['newuser'];
-	$pass = $_POST['newpassw'];
+	$user = sanitizeString($_POST['newuser']);
+	$pass = sanitizeString($_POST['newpassw']);
 
 	$result = queryMysql("INSERT INTO members VALUES('$user','$pass')");
 	//$result = queryMysql("SELECT * FROM members WHERE Username='$user' AND Password='$pass'");

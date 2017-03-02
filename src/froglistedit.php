@@ -6,12 +6,12 @@ session_start();
 if(isset($_POST['frogID'])){
 	$num = count($_POST['frogID']);
 	for($i = 0; $i < $num; $i++){
-		$name = $_POST['editname'][$i];
+		$name = sanitizeString($_POST['editname'][$i]);
 		$type = $_POST['edittype'][$i];
-		$gender = $_POST['editgender'][$i];
-		$env = $_POST['editenv'][$i];
-		$birth = $_POST['editbirth'][$i];
-		$death = $_POST['editdeath'][$i];;
+		$gender = sanitizeString($_POST['editgender'][$i]);
+		$env = sanitizeString($_POST['editenv'][$i]);
+		$birth = sanitizeString($_POST['editbirth'][$i]);
+		$death = sanitizeString($_POST['editdeath'][$i]);
 		$frogID = $_POST['frogID'][$i];
 		if(isset($_POST['toDelete'][$i])){
 			$id = $_POST['toDelete'][$i];

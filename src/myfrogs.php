@@ -3,21 +3,21 @@ include 'functions.php';
 session_name('FROG');
 session_start();
 
-if(isset($_POST['type'])){
+if(isset($_POST['type'])){//adding new frong entry
 	$result = queryMysql("SELECT * FROM data");
 	$num = $result->num_rows;
 	$frogID = $num + 1;
-	$type = $_POST['type'];
-	$name = $_POST['name'];
-	$env = $_POST['environment'];
-	$birth = $_POST['birth'];
-	$gender = $_POST['gender'];
-	$death = $_POST['death'];
+	$type = sanitizeString($_POST['type'];
+	$name = sanitizeString($_POST['name']);
+	$env = sanitizeString($_POST['environment']);
+	$birth = sanitizeString($_POST['birth']);
+	$gender = sanitizeString($_POST['gender']);
+	$death = sanitizeString($_POST['death']);
 	if($birth == ''){
 		$birth = date('d-m-Y / h:ia');
 	}
 	$result = queryMysql("INSERT INTO data VALUES($frogID,'$name','$gender','$type','$env','$birth','$death')");//NEW FROG ENTRY CODE//NEW frog entry
-}else if(isset($_POST['asc'])){
+}else if(isset($_POST['asc'])){//view by field ascending
 	$asc = $_POST['asc'];
 	echo "<div class='page-header'>
 				<a style='transform:translate(0,40px); color:green;cursor:pointer' class='fa fa-arrow-circle-left fa-2x' href='index.php'></a>
@@ -90,11 +90,11 @@ if(isset($_POST['type'])){
 				<td class='text-center'>".$row['birth']."</td>
 				<td class='text-center'>".$row['death']."</td></tr>";
 		}
-		echo "</tbody></table>";//ASCENDING TABLE VIEW BY FIELD CLICKED
+		echo "</tbody></table>";
 	}else{
-	echo '<h3>Your Frogs list is empty.</h3>';//view by given field asc
+	echo '<h3>Your Frogs list is empty.</h3>';
 }
-}else if(isset($_POST['desc'])){
+}else if(isset($_POST['desc'])){//view by field descending
 	$desc = $_POST['desc'];
 	echo "<div class='page-header'>
 				<a style='transform:translate(0,40px); color:green;cursor:pointer' class='fa fa-arrow-circle-left fa-2x' href='index.php'></a>
@@ -170,9 +170,9 @@ if(isset($_POST['type'])){
 		}
 		echo "</tbody></table>";
 	}else{
-	echo '<h3>Your Frogs list is empty.</h3>';//view by given field desc
+	echo '<h3>Your Frogs list is empty.</h3>';
 }
-}else{
+}else{//main view
 	echo "<div class='page-header'>
 				<a style='transform:translate(0,40px); color:green;cursor:pointer' class='fa fa-arrow-circle-left fa-2x' href='index.php'></a>
 				<h4 class='text-center head'>".ucfirst($_SESSION['user'])."'s Frogs</h4>
@@ -245,12 +245,9 @@ if(isset($_POST['type'])){
 				<td class='text-center'>".$row['birth']."</td>
 				<td class='text-center'>".$row['death']."</td></tr>";
 		}
-		echo "</tbody></table>";//Main View
+		echo "</tbody></table>";
 }else{
 	echo '<h3>Your Frogs list is empty.</h3>';
 }
 }
-
-/*/* <img style="border-radius:10px; width:200px; height:200px" class="" src="img/frogtype/'.$row['type'].'.jpg" alt="'.$row['name'].'">
-	          echo '</tr></table>';*/
 ?>
