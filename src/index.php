@@ -62,8 +62,8 @@ if(isset($_SESSION['user'])){
 			<meta charset='utf-8'>
 			<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 			<meta name='viewport' content='width=device-width, inital-scale=1.0'>
-			<link rel='stylesheet' href='css/bootstrap.css?0.3'>
-			<link rel='stylesheet' href='css/style.css?2.6'>
+			<link rel='stylesheet' href='css/bootstrap.css?0.4'>
+			<link rel='stylesheet' href='css/style.css?2.7'>
 			<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 			<link rel='shortcut icon' href='img/mm.png' type='image/x-icon'>
 			</head>
@@ -139,7 +139,7 @@ if(isset($_SESSION['user'])){
 		<meta charset='utf-8'>
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 		<meta name='viewport' content='width=device-width, inital-scale=1.0'>
-		<link rel='stylesheet' href='css/bootstrap.min.css'>
+		<link rel='stylesheet' href='css/bootstrap.css?0.4'>
 		<link rel='stylesheet' href='css/style.css?2.7'>
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 		<link rel='shortcut icon' href='img/mm.png' type='image/x-icon'>
