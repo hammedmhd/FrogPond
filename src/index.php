@@ -115,7 +115,7 @@ if(isset($_SESSION['user'])){
   			</form>
 				<div class='label1 text-center'>
 					<img id='myfrogs.php' style='width:110px; height:90px; cursor:pointer' src='img/fr.png' alt='Frog' onclick='loadPage(this.id)'>
-					<br><p class='caption caption1' style='color:black;'><b>My Frogs</b></p>
+					<br><p class='caption caption1' style='color:black;'><b>".ucfirst($_SESSION['user'])." Frogs</b></p>
 				</div>
 				<div class='label2 text-center col-sm-2 col-sm-push-2 col-md-2 col-md-push-3'>
 					<img id='searchfrogs.php' style='width:110px; height:90px; cursor:pointer' src='img/pinkf.png' alt='Frog' onclick='loadPage(this.id)'>
