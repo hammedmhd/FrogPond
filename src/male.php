@@ -1,10 +1,10 @@
 <?php
 include 'functions.php';
+header('Content-Type: charset=UTF-8');
 
-//UPDATING MALE STATUS BADGE
-if(isset($_GET['maleStatus'])){
-	$result = queryMysql("SELECT * FROM data WHERE gender='M'");
-	$num = $result->num_rows;
-	echo $num;
+if (isset($_GET['maleStatus'])) {//UPDATING MALE STATUS BADGE
+    $result = queryMysql("SELECT * FROM data WHERE gender='M'");
+    $num = $result->num_rows;
+    echo $num;
 }
 ?>

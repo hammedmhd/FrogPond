@@ -3,13 +3,21 @@ html,body{
 	padding:0;
 	height:100%;
 	box-sizing:border-box;
-	font-family: verdana;
+	font-family: sans-serif;
 	font-size:12px;
 	user-select:none;
 }
 
+
 body{
-	background: radial-gradient(lightblue, skyblue 80%);
+	//background: radial-gradient(lightblue, skyblue 80%);
+}
+
+a:hover{
+	text-decoration:none;
+}
+a:focus{
+	text-decoration:none;
 }
 
 .name{
@@ -32,6 +40,10 @@ table img{
 	//width:100%; 
 	border:1px solid lightgrey;
 	margin-bottom:5px;
+}
+
+.fixme{
+	transform: 
 }
 
 .panel.panel-success{
@@ -58,31 +70,24 @@ table img{
 	margin-left:100px;
 }
 
-.green{
-	background-color: limegreen;
-}
-
 .badge{
 	
 }
 
-.deepPink{
-	background-color: DeepPink;
-}
 .nav.navbar-nav.navbar-right{
 	margin-right:100px;
 }
 
-.nav.navbar-nav.navbar-right li i{
+.nav.navbar-nav.navbar-right li{
 	padding:10px;
-	line-height: 48px;
+	//line-height: 48px;
 }
 
 .nav.navbar-nav.navbar-right li:nth-child(1){
 	//padding: 14px;
 }
-.nav.navbar-nav.navbar-right li:nth-child(2){
-	//padding: 14px;
+.nav.navbar-nav.navbar-right li:nth-child(3){
+	padding:0px;
 }
 
 #deletePanel{
@@ -123,6 +128,16 @@ table img{
 	transform:translate(0,7px);			
 }
 
+.transparent{
+	background-color: rgba(255,255,255,1);
+	font-size:11px;
+	color:#777777;
+	//transform:translate(0,10px);
+	//min-width:80px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
 a:hover{
 	text-decoration: none;
 }
@@ -131,15 +146,18 @@ h4{
 	color:#2d2d2d;
 }
 input[type='text']{
-	font-size:11px;
+	font-size:13px;
+}
+input[type='password']{
+	font-size:13px;
 }
 input[type='text']:focus{
-	box-shadow:0 0 10px limegreen;
+	box-shadow:0 0 10px #337AB7;
 	outline:none;
 }
 
 input[type='password']:focus{
-	box-shadow:0 0 10px limegreen;
+	box-shadow:0 0 10px #337AB7;
 	outline:none;
 }
 
