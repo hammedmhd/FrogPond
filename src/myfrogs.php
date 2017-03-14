@@ -199,7 +199,7 @@ if (isset($_POST['type'])) {//NEW FROG ENTRY CODE//NEW frog entry
 } else {//Main View
     echo "<div class='page-header'>
         <a style='transform:translate(0,45px); color:#337AB7;cursor:pointer' class='fa fa-arrow-circle-left fa-2x' href='index.php'></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;<a href='interact.php' style=''><button style='transform:translate(0,40px); padding-left:20px;' class='btn btn-primary btn-sm'>View Frog Pond<i style='display:inline-block; transform:translate(5px,5px);color:gold;font-size:12px'>Beta</i></button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href='interact.php' style=''><button style='transform:translate(0,40px); padding-left:20px;' class='btn btn-primary btn-sm'>View Frog Pond<b style='display:inline-block; transform:translate(5px,5px);color:gold;font-size:12px'>Beta</b></button></a>
         <h4 class='text-center head'>".ucfirst($_SESSION['user'])."'s Frogs</h4>
         <i id='editme' class='fa fa-plus-circle fa-2x' style='float:right; transform:translate(0,-23px);color:#337AB7;cursor:pointer' onclick='newFrog()'></i>
         </div>";
